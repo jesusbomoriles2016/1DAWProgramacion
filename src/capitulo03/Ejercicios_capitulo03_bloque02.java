@@ -7,8 +7,8 @@ public class Ejercicios_capitulo03_bloque02 {
 	public static void main (String args[]) {
 //		Ejercicio1();
 //		Ejercicio2();
-		Ejercicio3();
-		Ejercicio4();
+//		Ejercicio3();
+//		Ejercicio4();
 	}	
 	
 	public static void Ejercicio1() {
