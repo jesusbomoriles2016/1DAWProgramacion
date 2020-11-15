@@ -6,8 +6,8 @@ public class Ejercicios_capitulo02_bloque03 {
 
 	public static void main (String args[]) {
 //		Ejercicio1();
-		Ejercicio2();
-//		Ejercicio3();
+//		Ejercicio2();
+		Ejercicio3();
 //		Ejercicio4();
 	}
 	
@@ -103,6 +103,20 @@ public class Ejercicios_capitulo02_bloque03 {
 	}
 	
 	public static void Ejercicio3 () {
+		int elegirOperacion, longCateto1, longCateto2, longRadioCircunferencia, baseRectángulo, alturaRectángulo, baseTriángulo, alturaTriángulo;
+		
+		System.out.println("MENÚ DE CÁLCULO (pulsa para ejecutar):");
+		System.out.println("1. Cálculo de la hipotenusa de un triángulo.");
+		System.out.println("2. Cálculo de la superficie de una circunferencia.");
+		System.out.println("3. Cálculo del perímetro de una circunferencia.");
+		System.out.println("4. Cálculo del área de un rectángulo.");
+		System.out.println("5. Cálculo del área de un triángulo.");
+		System.out.println("Salir de la aplicación.");
+		
+		String str = JOptionPane.showInputDialog("Introduce un número: ");
+		elegirOperacion = Integer.parseInt(str);
+		
+		
 		
 	}
 	
