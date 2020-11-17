@@ -1,7 +1,7 @@
-/*package ejercicios_metodos;
+package ejercicios_metodos;
 
 import javax.swing.JOptionPane;
-
+/*
 public class llamar_metodos {
 
 	public static void main (String args[]) {
@@ -131,5 +131,4 @@ public class llamar_metodos {
 	int numero = 100;
 	System.out.println(ejercicios_metodos1.recursividad(numero));		
 	}
-}
-*/
+}*/

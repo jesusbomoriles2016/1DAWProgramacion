@@ -35,7 +35,7 @@ public class ej5 {
 	 * @return
 	 */
 	public static  int [] removeInteger (int array [], int numBuscar) {
-		int numOcurrences = 0;
+		int numOcurrences = 0, aux = 0;
 		
 		for (int i = 0; i < array.length; i++) {
 			if (numBuscar == array[i]) {
@@ -43,17 +43,18 @@ public class ej5 {
 			}
 		}
 		
-		int lonArray2 = (array.length - numOcurrences) -1;
+		int lonArray2 = array.length - numOcurrences;
 		int array2[] = new int [lonArray2];
 		
-		for (int i = 0; i < array2.length; i++) {
+		for (int i = 0; i < array.length; i++) {
 			if (array[i] == numBuscar) {
-				
+				aux = aux + 1;
 			}
 			
 			else {
-				array2[i] = array[i];
+				array2[i - aux] = array[i];
 			}
+			
 		}
 		
 		return array2;
