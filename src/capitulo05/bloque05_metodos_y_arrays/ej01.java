@@ -2,7 +2,7 @@ package capitulo05.bloque05_metodos_y_arrays;
 
 import tutorialJava.Utils;
 
-public class ej1 {
+public class ej01 {
 
 	/**
 	 * 

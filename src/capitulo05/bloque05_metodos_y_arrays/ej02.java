@@ -2,7 +2,7 @@ package capitulo05.bloque05_metodos_y_arrays;
 
 import javax.swing.JOptionPane;
 
-public class ej2 {
+public class ej02 {
 
 	/**
 	 * 
