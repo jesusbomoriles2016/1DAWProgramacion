@@ -7,13 +7,12 @@ import javax.swing.JOptionPane;
 
 public class ej01 {
 	
-	List<String> menuEditorTextos = new ArrayList<String>();
-	
-	int elegirOpcion = mostrarMenu();
+	public static void main(String[] args) {
+		List<String> menuEditorTextos = new ArrayList<String>();
 		
-	
-	
-	
+		int elegirOpcion = mostrarMenu();
+		
+	}
 	
 	public static int mostrarMenu () {
 		int elegirOpcion;
