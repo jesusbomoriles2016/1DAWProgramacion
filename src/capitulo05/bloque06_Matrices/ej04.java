@@ -1,4 +1,4 @@
-package capitulo05.bloque6_Matrices;
+package capitulo05.bloque06_Matrices;
 
 public class ej04 {
 
