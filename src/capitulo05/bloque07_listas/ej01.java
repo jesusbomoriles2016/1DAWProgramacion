@@ -12,10 +12,43 @@ public class ej01 {
 		
 		int elegirOpcion = mostrarMenu();
 		
+		switch (elegirOpcion) {
+		case 0:
+		abandonarPrograma();
+		break;
+		case 1:
+		String nuevaLinea = JOptionPane.showInputDialog("Introduce una nueva línea");
+		agregarLineaTexto(nuevaLinea, menuEditorTextos);
+		break;			
+		case 2:
+		String str = JOptionPane.showInputDialog("Introduce un número de línea: ");
+		int numLinea = Integer.parseInt(str);
+		String nuevaLinea2 = JOptionPane.showInputDialog("Introduce la nueva línea: ");
+		insertarLineaEnTexto(numLinea, nuevaLinea2);
+		case 3:
+		
+		break;
+		case 4:
+		
+		break;
+		case 5:
+		
+		break;
+		case 6:
+		
+		break;
+		case 7:
+		
+		break;
+		case 8:
+		
+		break;
+	}
+		
 	}
 	
 	public static int mostrarMenu () {
-		int elegirOpcion;
+		int opcionElegida;
 		
 		String str = JOptionPane.showInputDialog("ELIGA UNA OPCIÓN:"
 				+ "/n 1. Abandonar el programa."
@@ -26,16 +59,24 @@ public class ej01 {
 				+ "/n 6. Cortar un conjunto de líneas."
 				+ "/n 7. Pegar un conjunto de líneas cortadas en otra posición."
 				+ "/n Imprimir el fichero.");
-		elegirOpcion = Integer.parseInt(str);
+		opcionElegida = Integer.parseInt(str);
 		
-		return elegirOpcion;
+		return opcionElegida;
 	}
 	
-	public static void agregarLineaTexto (String texto) {
-		
+	public static void abandonarPrograma () {
+		System.out.println("El programa ha terminado.");
+	}
+	
+	public static void agregarLineaTexto (String texto,List<String> lista ) {
+		 
+		String nuevaLinea = JOptionPane.showInputDialog("Introduce una nueva línea: ");
+		lista.add(nuevaLinea);
+
 	}
 	
 	public static void insertarLineaEnTexto (int numLinea, String texto) {
+		
 		
 	}
 	
