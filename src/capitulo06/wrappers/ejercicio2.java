@@ -12,7 +12,7 @@ public class ejercicio2 {
 		boolean Caracter = false;
 		
 		for (int i = 0; i < args.length; i++) {
-			String contraseña = JOptionPane.showInputDialog("Introduce una contraseña:");
+			String contraseÃ±a = JOptionPane.showInputDialog("Introduce una contraseï¿½a:");
 		}
 		
 	}

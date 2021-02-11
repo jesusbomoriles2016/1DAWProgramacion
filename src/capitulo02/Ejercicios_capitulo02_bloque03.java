@@ -153,18 +153,18 @@ public class Ejercicios_capitulo02_bloque03 {
 				String str6 = JOptionPane.showInputDialog("Introduce la longitud de la altura del rectagulo: ");
 				alturaRectangulo = Integer.parseInt(str6);
 				
-				System.out.println("El �rea del rect�ngulo es: " + baseRect�ngulo * alturaRect�ngulo);
+				System.out.println("El area del rectangulo es: " + baseRectangulo * alturaRectangulo);
 			}
 			
 			else if (elegirOperacion == 5) {
 				
 				String str7 = JOptionPane.showInputDialog("Introduce la base del tri�ngulo: ");
-				baseTri�ngulo = Integer.parseInt(str7);
+				baseTriangulo = Integer.parseInt(str7);
 				
 				String str8 = JOptionPane.showInputDialog("Introduce la altura del tri�ngulo: ");
-				alturaTri�ngulo = Integer.parseInt(str8);
+				alturaTriangulo = Integer.parseInt(str8);
 				
-				System.out.println("El �rea del tri�ngulo es: " + (baseTri�ngulo * alturaTri�ngulo) / 2);
+				System.out.println("El �rea del triangulo es: " + (baseTriangulo * alturaTriangulo) / 2);
 			}
 			
 			else if (elegirOperacion == 0) {
