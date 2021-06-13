@@ -12,7 +12,11 @@ public class ej01_02 {
 		int matriz [][] = new int [4][4];
 		int min = 10, max = 50;
 		
+		
 		matrizValoresAzar(matriz, min, max);
+		
+		System.out.println("Matriz:");
+		
 		muestraMatriz(matriz);
 	}
 

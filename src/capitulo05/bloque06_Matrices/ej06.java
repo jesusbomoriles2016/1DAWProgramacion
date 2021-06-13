@@ -3,7 +3,8 @@ package capitulo05.bloque06_Matrices;
 public class ej06 {
 
 	public static void main(String[] args) {
-		int matriz [][] = new int [][] { {8, 0, 0},
+		int matriz [][] = new int [][] { 
+			{8, 0, 0},
 			{0, 6, 0},
 			{0, 0, 4}};
 
@@ -18,18 +19,40 @@ public class ej06 {
 		
 	}
 	
-	public static boolean matrizEsDispersa (int matriz [][]) {
-		boolean esDispersa = false;
-		
+	
+	public static boolean matrizEsDispersa(int matriz[][]) {
+		boolean dispersa = true;
+		int contador = 0;
 		for (int i = 0; i < matriz.length; i++) {
-			for (int j = 0; j < matriz[i].length; j++) {
+			for (int j = 0; j < matriz.length; j++) {
 				if (matriz[i][j] == 0) {
-					
+					contador = contador + 1;
 				}
+			}
+			if (contador >= 1) {
+				contador = 0;
+			} else {
+				dispersa = false;
 			}
 		}
 		
-		return esDispersa;
-	}
+		for (int i = 0; i < matriz[0].length; i++) {
+			for (int j = 0; j < matriz.length; j++) {
+				if (matriz[j][i] == 0) {
+					contador = contador + 1;
+				}
+			}
+			
+			if (contador >= 1) {
+				contador = 0;
+			} else {
+				dispersa = false;
+			}
+			
+		}
 
+		return dispersa;
+
+	}
+	
 }

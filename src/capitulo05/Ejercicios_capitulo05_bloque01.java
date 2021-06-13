@@ -3,11 +3,17 @@ package capitulo05;
 public class Ejercicios_capitulo05_bloque01 {
 
 	public static void main (String args[]) {
+//		Ejercicio0();
 //		Ejercicio1();
 //		Ejercicio2();
 //		Ejercicio3();
 //		Ejercicio4();
 //		Ejercicio5();
+	}
+	
+	public static void Ejercicio0 () {
+		
+		
 	}
 	
 	public static void Ejercicio1 () {

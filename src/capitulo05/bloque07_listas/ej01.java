@@ -8,92 +8,132 @@ import javax.swing.JOptionPane;
 public class ej01 {
 	
 	public static void main(String[] args) {
-		List<String> menuEditorTextos = new ArrayList<String>();
+		int elegirOpcion;
+		List<String> lista = new ArrayList<String>();
+		List<String> portapapeles = new ArrayList<String>();
 		
-		int elegirOpcion = mostrarMenu();
+		lista.add("Primera l√≠nea");
+		lista.add("Segunda l√≠nea");
+		lista.add("Tercera l√≠nea");
 		
-		switch (elegirOpcion) {
-		case 0:
-		abandonarPrograma();
-		break;
-		case 1:
-		String nuevaLinea = JOptionPane.showInputDialog("Introduce una nueva lÌnea");
-		agregarLineaTexto(nuevaLinea, menuEditorTextos);
-		break;			
-		case 2:
-		String str = JOptionPane.showInputDialog("Introduce un n˙mero de lÌnea: ");
-		int numLinea = Integer.parseInt(str);
-		String nuevaLinea2 = JOptionPane.showInputDialog("Introduce la nueva lÌnea: ");
-		insertarLineaEnTexto(numLinea, nuevaLinea2);
-		case 3:
-		
-		break;
-		case 4:
-		
-		break;
-		case 5:
-		
-		break;
-		case 6:
-		
-		break;
-		case 7:
-		
-		break;
-		case 8:
-		
-		break;
-	}
+	
+		do {
+			elegirOpcion = mostrarMenu() - 1;
+			
+			switch (elegirOpcion) {
+			case 0:
+				abandonarPrograma();
+				break;
+			case 1:
+				agregarLineaTexto(lista);
+				break;
+				
+			case 2:
+				insertarLineaEnTexto(lista);
+				break;
+				
+			case 3:
+				editarUnaLinea(lista);
+				break;
+				
+			case 4:
+				borrarUnaLinea(lista);
+				break;
+				
+			case 5:
+				cortarConjuntoLineas(lista, portapapeles);
+				break;
+				
+			case 6:
+				pegarConjuntoLineas(lista, portapapeles);
+				break;
+				
+			case 7:
+				imprimirFichero(lista);
+				break;
+				
+			default:
+				System.out.println("Opci√≥n elegida no v√°lida");	
+			} 	
+			
+		} while (elegirOpcion != 0);
 		
 	}
 	
 	public static int mostrarMenu () {
 		int opcionElegida;
 		
-		String str = JOptionPane.showInputDialog("ELIGA UNA OPCI”N:"
-				+ "/n 1. Abandonar el programa."
-				+ "/n 2. Agregar una lÌnea al texto."
-				+ "/n 3. Insertar una lÌnea desde cualquier posiciÛn."
-				+ "/n 4. Editar una lÌnea."
-				+ "/n 5. Borrar una lÌnea."
-				+ "/n 6. Cortar un conjunto de lÌneas."
-				+ "/n 7. Pegar un conjunto de lÌneas cortadas en otra posiciÛn."
-				+ "/n Imprimir el fichero.");
+		String str = JOptionPane.showInputDialog("ELIGA UNA OPCI√ìN:"
+				+ " \n1. Abandonar el programa."
+				+ " \n2. Agregar una l√≠nea al texto."
+				+ " \n3. Insertar una l√≠nea desde cualquier posici√ìn."
+				+ " \n4. Editar una l√≠nea."
+				+ " \n5. Borrar una l√≠nea."
+				+ " \n6. Cortar un conjunto de l√≠neas."
+				+ " \n7. Pegar un conjunto de l√≠eas cortadas en otra posici√≥n."
+				+ " \n8. Imprimir el fichero.");
 		opcionElegida = Integer.parseInt(str);
 		
 		return opcionElegida;
 	}
 	
 	public static void abandonarPrograma () {
-		System.out.println("El programa ha terminado.");
+		JOptionPane.showMessageDialog(null, "El programa ha terminado");
 	}
 	
-	public static void agregarLineaTexto (String texto,List<String> lista ) {
-		 
-		String nuevaLinea = JOptionPane.showInputDialog("Introduce una nueva lÌnea: ");
-		lista.add(nuevaLinea);
-
+	public static void agregarLineaTexto (List<String> lista) {
+		String str = JOptionPane.showInputDialog("A√±ade una l√≠nea");
+		lista.add(str);
 	}
 	
-	public static void insertarLineaEnTexto (int numLinea, String texto) {
-		
-		
-	}
-	
-	public static void editarUnaLinea (int numLinea, String nuevoTexto) {
+	public static void insertarLineaEnTexto (List<String> lista) {
+		String linea = JOptionPane.showInputDialog("Introduce el texto");
+		String str = JOptionPane.showInputDialog("Introduce un n√∫mero de l√≠nea");
+		int numLinea = Integer.parseInt(str);
+		lista.add(numLinea, linea);
 		
 	}
 	
-	public static void borrarUnaLinea (int numLinea) {
-		
+	public static void editarUnaLinea (List<String> lista) {
+		String linea = JOptionPane.showInputDialog("Introduce el texto");
+		String str = JOptionPane.showInputDialog("Introduce un n√∫mero de l√≠nea");
+		int numLinea = Integer.parseInt(str);
+		lista.remove(numLinea);
+		lista.add(numLinea, linea);
 	}
 	
-	public static void cortarConjuntoLineas (int numLineaInicial, int numLineaFinal ) {
-		
+	public static void borrarUnaLinea (List<String> lista) {
+		String str = JOptionPane.showInputDialog("Introduce un n√∫mero de l√≠nea");
+		int numLinea = Integer.parseInt(str);
+		lista.remove(numLinea);
 	}
 	
-	public static void pegarConjuntoLineas (int numLinea) {
+	public static void cortarConjuntoLineas (List<String> lista, List<String> portapapeles) {
+		String str = JOptionPane.showInputDialog("Introduce la primera l√≠nea");
+		int numLineaMin = Integer.parseInt(str);
+		String str2 = JOptionPane.showInputDialog("Introduce la √∫ltima l√≠nea");
+		int numLineaMax = Integer.parseInt(str2);
 		
+		for (int i = numLineaMin; i < numLineaMax; i++) {
+			portapapeles.add(lista.get(i));
+			lista.remove(numLineaMin);
+		}
+	}
+	
+	public static void pegarConjuntoLineas (List<String> lista, List<String> portapapeles) {
+		String str = JOptionPane.showInputDialog("Introduce un n√∫mero de l√≠nea");
+		int numLinea = Integer.parseInt(str);
+		for (int i = numLinea; i < portapapeles.size(); i++) {
+			lista.add(numLinea, portapapeles.get(i));
+			portapapeles.remove(0);
+		}
+	}
+	
+	public static void imprimirFichero (List<String> lista) {
+		System.out.println("Lista:");
+		for (int i = 0; i < lista.size(); i++) {
+			System.out.println("\t" + i + " - " + lista.get(i));
+		}
 	}
 	
 }	
